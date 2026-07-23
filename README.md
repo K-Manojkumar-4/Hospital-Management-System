@@ -17,6 +17,13 @@ Full-stack hospital automation platform built for a real healthcare client, hand
 
 `HTML` · `CSS` · `PHP` · `JavaScript` · `Python` · `SQL` · AI/ML techniques for predictive modules
 
+## Prerequisites
+- PHP 7.4+ with the mysqli extension
+- MySQL or MariaDB
+- Composer (for PHPMailer, already vendored — only needed if you want to update dependencies)
+- A local server stack: XAMPP/WAMP/MAMP, or PHP's built-in server
+- Python 3.9+ and pip (only for the /chatbot module)
+  
 ## 🏗️ Architecture
 
 The system is organized into role-specific portals sitting on a shared PHP/MySQL backend, with Python-based ML services handling prediction and chatbot inference, integrated via API calls from the PHP layer.
@@ -30,6 +37,7 @@ cd hms
 # Configure DB credentials in config file
 # Serve via PHP (e.g. XAMPP/WAMP or php -S localhost:8000)
 ```
+BDMS/ and pharm/ are separate mini-apps with their own database and entry point — see the setup guide for exact database names, since the module READMEs and the actual PHP connection code don't fully agree (documented in docs/DATABASE_SCHEMA.md).
 
 ## 📌 Impact
 
